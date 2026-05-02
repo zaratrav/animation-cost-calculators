@@ -1,0 +1,26 @@
+<html><head><title>2D Animation Cost</title><link rel="stylesheet" href="../style.css">    <meta name="google-site-verification" content="PkLa_ViOo6FAHpvh8SacceMb95o9tePRdrqLNBz9X1M" />
+</head>
+<body>
+<h1>2D Animation Cost Calculator</h1>
+
+<label>Duration (minutes):</label><input id="dur" type="number"><br>
+<label>Complexity:</label>
+<select id="comp">
+<option value="1000">Simple ($1000/min)</option>
+<option value="3000">Standard ($3000/min)</option>
+<option value="6000">Advanced ($6000/min)</option>
+</select><br>
+
+<button onclick="calc()">Calculate</button>
+<p id="res"></p>
+
+<script>
+function calc(){
+let d=+document.getElementById('dur').value||0;
+let c=+document.getElementById('comp').value||0;
+document.getElementById('res').innerText="Estimated cost: $"+(d*c).toFixed(2);
+}
+</script>
+
+<a href="../index.html">Back</a>
+</body></html>

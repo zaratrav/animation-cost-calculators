@@ -1,0 +1,26 @@
+<html><head><title>Explainer Video Cost</title><link rel="stylesheet" href="../style.css">    <meta name="google-site-verification" content="PkLa_ViOo6FAHpvh8SacceMb95o9tePRdrqLNBz9X1M" />
+</head>
+<body>
+<h1>Explainer Video Animation Cost</h1>
+
+<label>Duration (seconds):</label><input id="dur" type="number"><br>
+<label>Style:</label>
+<select id="style">
+<option value="20">Basic ($20/sec)</option>
+<option value="50">Professional ($50/sec)</option>
+<option value="100">Premium ($100/sec)</option>
+</select><br>
+
+<button onclick="calc()">Estimate</button>
+<p id="res"></p>
+
+<script>
+function calc(){
+let d=+document.getElementById('dur').value||0;
+let s=+document.getElementById('style').value||0;
+document.getElementById('res').innerText="Estimated cost: $"+(d*s).toFixed(2);
+}
+</script>
+
+<a href="../index.html">Back</a>
+</body></html>

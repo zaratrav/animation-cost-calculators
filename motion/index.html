@@ -1,0 +1,26 @@
+<html><head><title>Motion Graphics Pricing</title><link rel="stylesheet" href="../style.css">    <meta name="google-site-verification" content="PkLa_ViOo6FAHpvh8SacceMb95o9tePRdrqLNBz9X1M" />
+</head>
+<body>
+<h1>Motion Graphics Pricing Estimator</h1>
+
+<label>Project Length (seconds):</label><input id="len" type="number"><br>
+<label>Complexity:</label>
+<select id="comp">
+<option value="15">Simple ($15/sec)</option>
+<option value="40">Standard ($40/sec)</option>
+<option value="80">High-end ($80/sec)</option>
+</select><br>
+
+<button onclick="calc()">Calculate</button>
+<p id="res"></p>
+
+<script>
+function calc(){
+let l=+document.getElementById('len').value||0;
+let c=+document.getElementById('comp').value||0;
+document.getElementById('res').innerText="Estimated cost: $"+(l*c).toFixed(2);
+}
+</script>
+
+<a href="../index.html">Back</a>
+</body></html>
